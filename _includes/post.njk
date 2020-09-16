@@ -1,0 +1,12 @@
+---
+layout: index.njk
+---
+
+<article class="{{ type }}">
+{%- if date %}
+<time class="postdate" datetime="{{ date | toISOString }}"><a href="{{ url }}">{{ date | formatDateForBlog }}</a></time>
+{%- endif %}
+<div class="postbody">
+  {{ content | safe }}
+</div>
+</article>

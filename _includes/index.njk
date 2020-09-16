@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charlie Park’s tumblelog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    {% include "_style.css" %}
+  </style>
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Charlie Park!</a></h1>
+    <div>(or, rather, his tumblelog)</div>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>Hey there. I’m Charlie. I like adventures, friends, and adventures with friends.</p>
+  </footer>
+</body>
+</html>
+

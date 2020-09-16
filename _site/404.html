@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charlie Park’s tumblelog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* General CSS for the blog */
+a { color: inherit; text-decoration: none; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Avenir Next', Avenir, system-ui, -apple-system, sans-serif;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+}
+
+footer {
+  background: #464646;
+  color: hsla(0, 0%, 100%, 0.8);
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+header { text-align: center }
+header h1 { font-size: 4rem; margin-bottom: 0 }
+
+html { color: hsla(0, 0%, 0%, 0.9) }
+
+main {
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+.postbody { padding: 20px }
+.postbody a { color: coral; text-decoration: none; border-bottom: 1px solid #e6e6e6; }
+.postbody a:hover { border-color: #c6c6c6 }
+
+.postdate {
+  background: #e6e6e6;
+  border-radius: 2em;
+  display: block;
+  font-size: .75rem;
+  letter-spacing: .8px;
+  margin-top: 4rem;
+  text-transform: uppercase;
+  text-align: right;
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.postdate a { color: #545454; padding: 0 1rem }
+
+/* Post-specific CSS */
+
+.image { text-align: center }
+.image p { margin: 0 }
+
+.text {}
+
+.quote .postbody { font-size: 2rem; line-height: 3rem; }
+.quote p { padding-left: 1em }
+.quote p:first-child { padding-left: 1em; position: relative;}
+.quote p:first-child::before { content: '“'; font-family: Georgia; font-size: 4rem; line-height: 3rem; position: absolute; top: 10px; left: 0; }
+.quote p:last-child { font-size: 1rem; text-align: right }
+
+.video iframe { width: 100% !important }
+  </style>
+  <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Charlie Park!</a></h1>
+    <div>(or, rather, his tumblelog)</div>
+  </header>
+  <main>
+    <center>
+<p>That page doesn’t seem to exist. Sorry! Maybe check the <a href="/">home page?</a></p>
+</center>
+
+  </main>
+  <footer>
+    <p>Hey there. I’m Charlie. I like adventures, friends, and adventures with friends.</p>
+  </footer>
+</body>
+</html>
+
