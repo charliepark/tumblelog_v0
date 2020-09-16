@@ -82,31 +82,31 @@ main {
   </header>
   <main>
     <article class="quote">
-  <div class="postdate"><a href="/the_familiar_and_the_new/"><time datetime="2020-09-16T07:00:00.000Z">September 16, 2020</time></a></div>
+  <time class="postdate" datetime="2020-09-16T07:00:00.000Z"><a href="/the_familiar_and_the_new/">September 16, 2020</a></time>
   <div class="postbody">
     <p>One of my philosophies as a designer is that you should first start with the patterns that exist, and only break the rules little by little, in the right places. When [you] don’t break enough patterns, you end up with something boring and predictable. But when you break too many, you end up with something chaotic and confusing. There is a sweet spot, and it contains both the familiar and the new.</p>
-<p>Jack Cheng (<a href="">here</a>, though post is only available to Kickstarter backers)</p>
+<p>Jack Cheng (<a href="https://www.kickstarter.com/projects/jackcheng/these-days-a-novel/posts/347012">here</a>, though post is only available to Kickstarter backers)</p>
 
   </div>
 </article><article class="video">
-  <div class="postdate"><a href="/posts/2020_09_15_september_15/"><time datetime="2020-09-15T07:00:00.000Z">September 15, 2020</time></a></div>
+  <time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="/posts/2020_09_15_september_15/">September 15, 2020</a></time>
   <div class="postbody">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/n2nI60dpQg0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>It being September 15th, we remember four little girls from Birmingham — Addie Mae Collins, Cynthia Wesley, Carole Robertson, Carol Denise McNair — and twenty years later, a man from Spanish Town, Prince Far I.</p>
   </div>
 </article><article class="image">
-  <div class="postdate"><a href="/the_library/"><time datetime="2020-09-15T07:00:00.000Z">September 15, 2020</time></a></div>
+  <time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="/the_library/">September 15, 2020</a></time>
   <div class="postbody">
     <p><img src="/images/the_library_a_great_place_to_get_checked_out.jpg" alt="The Library: A good place to get checked out."></p>
 
   </div>
 </article><article class="text">
-  <div class="postdate"><a href="/hello_tumblelog/"><time datetime="2020-09-15T07:00:00.000Z">September 15, 2020</time></a></div>
+  <time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="/hello_tumblelog/">September 15, 2020</a></time>
   <div class="postbody">
     <h1>Hello, tumblelog</h1>
 <p>This is just a quick afternoon project I threw together, to play a bit more with Eleventy (<a href="https://www.11ty.dev/">11ty</a>) and <a href="http://netlify.com/">Netlify</a>.</p>
 <p>The goal was to create a very basic tumblelog, which most of the world knew as “the kind of microblog that Tumblr made”. Which isn’t <em>wrong</em>. But there were tumblelogs before Tumblr, and, I guess, after Tumblr as well.</p>
-<p>I think I’ve been hesitant to do much with my main website because … it feels like it should be SeRiOuS. Which, yeah, maybe. But it’s also kind of dead right now.</p>
+<p>I think I’ve been hesitant to do much with my main website because … it feels like my homepage should be SeRiOuS. Which, yeah, maybe. But it’s also kind of dead right now.</p>
 <p>So! I’m going to try this out and see if it works. If it does, I’ll look into moving my main blog over to this.</p>
 <p>Development went pretty well. I’ve built a few things with Eleventy before. I have to say, every time I start fresh with it I have to wrestle with the docs a fair amount. A lot of it’s really straightforward and clear. But something as basic as “how do I post a copy of each post’s content on the main page?” is somehow hard to search for. (The answer, by the way, is something like this:</p>
 <pre class="language-html"><code class="language-html">{{ %- for post in collections.all | reverse %}<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ post.data.type }}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>postdate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ post.url }}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>time</span> <span class="token attr-name">datetime</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>{{ post.data.date | toISOString }}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>        {{ post.data.date | formatDateForBlog }}<br>      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>time</span><span class="token punctuation">></span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>postbody<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><br>    {{ post.templateContent | safe }}<br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">></span></span><br>{%- endfor %}<br></code></pre>
