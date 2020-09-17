@@ -9,6 +9,12 @@
     /* General CSS for the blog */
 a { color: inherit; text-decoration: none; }
 
+blockquote {
+  border-left: 2px solid #e6e6e6;
+  margin: 0;
+  padding-left: 1rem;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -30,7 +36,14 @@ footer {
 header { text-align: center }
 header h1 { font-size: 4rem; margin-bottom: 0 }
 
-html { color: hsla(0, 0%, 0%, 0.9) }
+html {
+  color: hsla(0, 0%, 0%, 0.9)
+}
+
+html.darkmode {
+  background: #272727;
+  color: hsla(0, 0%, 100%, 0.7);
+}
 
 main {
   flex-grow: 1;
@@ -65,13 +78,16 @@ main {
 
 .text {}
 
-.quote .postbody { font-size: 2rem; line-height: 3rem; }
-.quote p { padding-left: 1em }
-.quote p:first-child { padding-left: 1em; position: relative;}
+.quote .postbody { font-size: 2rem; }
+.quote.long .postbody { font-size: 1.5rem; }
+.quote.short .postbody { font-size: 3rem; }
+.quote p { padding-left: 2rem }
+.quote p:first-child { padding-left: 2rem; position: relative;}
 .quote p:first-child::before { content: '“'; font-family: Georgia; font-size: 4rem; line-height: 3rem; position: absolute; top: 10px; left: 0; }
 .quote p:last-child { font-size: 1rem; text-align: right }
 
 .video iframe { width: 100% !important }
+
   </style>
   <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 </head>
@@ -83,7 +99,9 @@ main {
   <main>
     
 <article class="text">
-<time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="">September 15, 2020</a></time>
+<time class="postdate" datetime="2020-09-15T00:00:00.000Z">
+  <a href="">September 15, 2020</a>
+</time>
 <div class="postbody">
   <h1>Hello, tumblelog</h1>
 <p>This is just a quick afternoon project I threw together, to play a bit more with Eleventy (<a href="https://www.11ty.dev/">11ty</a>) and <a href="http://netlify.com/">Netlify</a>.</p>
@@ -97,6 +115,7 @@ main {
 
 </div>
 </article>
+
   </main>
   <footer>
     <p>Hey there. I’m Charlie. I like adventures, friends, and adventures with friends.</p>

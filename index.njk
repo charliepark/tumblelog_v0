@@ -2,10 +2,13 @@
 eleventyExcludeFromCollections: true
 layout: "index.njk"
 ---
+
 {%- for post in collections.all | reverse -%}
-<article class="{{ post.data.type }}">
+<article class="{{ post | setClasses }}">
 {%- if post.data.date %}
-  <time class="postdate" datetime="{{ post.data.date | toISOString }}"><a href="{{ post.url }}">{{ post.data.date | formatDateForBlog }}</a></time>
+  <time class="postdate" datetime="{{ post.date | getISOString }}">
+    <a href="{{ post.url }}">{{ post.data.date | getHumanDate }}</a>
+  </time>
 {%- endif %}
   <div class="postbody">
     {{ post.templateContent | safe }}

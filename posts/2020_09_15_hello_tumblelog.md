@@ -1,6 +1,5 @@
 ---
 date: "2020-09-15"
-type: text
 permalink: "hello_tumblelog/"
 ---
 

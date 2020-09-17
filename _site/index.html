@@ -9,6 +9,12 @@
     /* General CSS for the blog */
 a { color: inherit; text-decoration: none; }
 
+blockquote {
+  border-left: 2px solid #e6e6e6;
+  margin: 0;
+  padding-left: 1rem;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -30,7 +36,14 @@ footer {
 header { text-align: center }
 header h1 { font-size: 4rem; margin-bottom: 0 }
 
-html { color: hsla(0, 0%, 0%, 0.9) }
+html {
+  color: hsla(0, 0%, 0%, 0.9)
+}
+
+html.darkmode {
+  background: #272727;
+  color: hsla(0, 0%, 100%, 0.7);
+}
 
 main {
   flex-grow: 1;
@@ -65,13 +78,16 @@ main {
 
 .text {}
 
-.quote .postbody { font-size: 2rem; line-height: 3rem; }
-.quote p { padding-left: 1em }
-.quote p:first-child { padding-left: 1em; position: relative;}
+.quote .postbody { font-size: 2rem; }
+.quote.long .postbody { font-size: 1.5rem; }
+.quote.short .postbody { font-size: 3rem; }
+.quote p { padding-left: 2rem }
+.quote p:first-child { padding-left: 2rem; position: relative;}
 .quote p:first-child::before { content: '“'; font-family: Georgia; font-size: 4rem; line-height: 3rem; position: absolute; top: 10px; left: 0; }
 .quote p:last-child { font-size: 1rem; text-align: right }
 
 .video iframe { width: 100% !important }
+
   </style>
   <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 </head>
@@ -81,27 +97,46 @@ main {
     <div>(or, rather, his tumblelog)</div>
   </header>
   <main>
-    <article class="quote">
-  <time class="postdate" datetime="2020-09-16T07:00:00.000Z"><a href="/the_familiar_and_the_new/">September 16, 2020</a></time>
+    <article class="quote long">
+  <time class="postdate" datetime="2020-09-16T01:00:00.000Z">
+    <a href="/anarchist_calisthenics/">September 16, 2020</a>
+  </time>
+  <div class="postbody">
+    <p>You know, you and especially your grandparents could have used more of a spirit of lawbreaking. One day you will be called upon to break a big law in the name of justice and rationality. Everything will depend on it. You have to be ready. How are you going to prepare for that day when it really matters?</p>
+<p>You have to stay ‘in shape’ so that when the big day comes you will be ready. What you need is ‘anarchist calisthenics.’</p>
+<p>Every day or so break some trivial law that makes no sense, even if it’s only jaywalking. Use your own head to judge whether a law is just or reasonable. That way, you’ll keep trim; and when the big day comes, you’ll be ready.</p>
+<p>James C. Scott, in <em>Two Cheers for Anarchism: Six Easy Pieces on Autonomy, Dignity, and Meaningful Work and Play</em>, speaking to some Germans in the past, or Americans today.</p>
+
+  </div>
+</article><article class="quote">
+  <time class="postdate" datetime="2020-09-16T00:00:00.000Z">
+    <a href="/the_familiar_and_the_new/">September 16, 2020</a>
+  </time>
   <div class="postbody">
     <p>One of my philosophies as a designer is that you should first start with the patterns that exist, and only break the rules little by little, in the right places. When [you] don’t break enough patterns, you end up with something boring and predictable. But when you break too many, you end up with something chaotic and confusing. There is a sweet spot, and it contains both the familiar and the new.</p>
 <p>Jack Cheng (<a href="https://www.kickstarter.com/projects/jackcheng/these-days-a-novel/posts/347012">here</a>, though post is only available to Kickstarter backers)</p>
 
   </div>
 </article><article class="video">
-  <time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="/posts/2020_09_15_september_15/">September 15, 2020</a></time>
+  <time class="postdate" datetime="2020-09-15T00:00:00.000Z">
+    <a href="/september_15th/">September 15, 2020</a>
+  </time>
   <div class="postbody">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/n2nI60dpQg0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <p>It being September 15th, we remember four little girls from Birmingham — Addie Mae Collins, Cynthia Wesley, Carole Robertson, Carol Denise McNair — and twenty years later, a man from Spanish Town, Prince Far I.</p>
   </div>
 </article><article class="image">
-  <time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="/the_library/">September 15, 2020</a></time>
+  <time class="postdate" datetime="2020-09-15T00:00:00.000Z">
+    <a href="/the_library/">September 15, 2020</a>
+  </time>
   <div class="postbody">
     <p><img src="/images/the_library_a_great_place_to_get_checked_out.jpg" alt="The Library: A good place to get checked out."></p>
 
   </div>
 </article><article class="text">
-  <time class="postdate" datetime="2020-09-15T07:00:00.000Z"><a href="/hello_tumblelog/">September 15, 2020</a></time>
+  <time class="postdate" datetime="2020-09-15T00:00:00.000Z">
+    <a href="/hello_tumblelog/">September 15, 2020</a>
+  </time>
   <div class="postbody">
     <h1>Hello, tumblelog</h1>
 <p>This is just a quick afternoon project I threw together, to play a bit more with Eleventy (<a href="https://www.11ty.dev/">11ty</a>) and <a href="http://netlify.com/">Netlify</a>.</p>
