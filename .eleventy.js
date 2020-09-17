@@ -1,6 +1,6 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
-const setDateToMidnight = (date) => { let d = (new Date(date)).toUTCString();return d; }
+const setDateToMidnight = (date) => (new Date(date)).toUTCString();
 
 const getISOString = (date) => {
   const midnight = setDateToMidnight(date);
@@ -8,7 +8,12 @@ const getISOString = (date) => {
 };
 const getHumanDate = (date) => {
   const midnight = setDateToMidnight(date);
-  return new Date(midnight).toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+  return new Date(midnight).toLocaleString('en-us', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+  });
 };
 
 const setClasses = (post) => {

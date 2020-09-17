@@ -17,6 +17,14 @@ body {
   min-height: 100vh;
 }
 
+code {
+  font-family: 'Monaco', monospace;
+  font-size: .8em;
+  background: #e6e6e6;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+
 footer {
   background: #464646;
   color: hsla(0, 0%, 100%, 0.8);
@@ -49,17 +57,13 @@ main {
 .postbody a:hover { border-color: #c6c6c6 }
 
 .postdate {
-  background: #e6e6e6;
-  border-radius: 2em;
+  border-bottom: 1px solid #e6e6e6;
   display: block;
   font-size: .75rem;
   letter-spacing: .8px;
   margin-top: 4rem;
   text-transform: uppercase;
   text-align: right;
-  background: none;
-  border-radius: 0;
-  border-bottom: 1px solid #e6e6e6;
 }
 .postdate a { color: #545454; padding: 0 1rem }
 

@@ -17,28 +17,44 @@ Development went pretty well. I’ve built a few things with Eleventy before. I 
 
 ```html
 {%- raw %}
-{{ %- for post in collections.all | reverse %}
-<article class="{{ post.data.type }}">
-  <div class="postdate">
-    <a href="{{ post.url }}">
-      <time datetime="{{ post.data.date | toISOString }}">
-        {{ post.data.date | formatDateForBlog }}
-      </time>
-    </a>
-  </div>
+{%- for post in collections.all | reverse -%}
+<article class="{{ post | setClasses }}">
+{%- if post.data.date %}
+  <time class="postdate" datetime="{{ post.data.date | getISOString }}">
+    <a href="{{ post.url }}">{{ post.data.date | getHumanDate }}</a>
+  </time>
+{%- endif %}
   <div class="postbody">
     {{ post.templateContent | safe }}
   </div>
 </article>
-{%- endfor %}
+{%- endfor -%}
 {%- endraw %}
 ```
 
 Oh! And that datetime format is handled like this, in your eleventy config file:
 
 ```js
+const setDateToMidnight = (date) => (new Date(date)).toUTCString();
+
+const getISOString = (date) => {
+  const midnight = setDateToMidnight(date);
+  return new Date(midnight).toISOString();
+};
+const getHumanDate = (date) => {
+  const midnight = setDateToMidnight(date);
+  return new Date(midnight).toLocaleString('en-us', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC'
+  });
+};
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter("toISOString", (date) => ( new Date(`${date} 00:00:00`).toISOString()));  
-  eleventyConfig.addFilter("formatDateForBlog", (date) => (new Date(`${date} 00:00:00`).toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' })));
+  eleventyConfig.addFilter("getHumanDate", (date) => getHumanDate(date));
+  eleventyConfig.addFilter("getISOString", (date) => getISOString(date));
 }
 ```
+
+Note the `timeZone: 'UTC'` bit in the `toLocaleString()` options! It’s pretty important!

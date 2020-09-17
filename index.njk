@@ -3,7 +3,7 @@ eleventyExcludeFromCollections: true
 layout: "index.njk"
 ---
 
-{%- for post in collections.all | reverse -%}
+{%- for post in collections.post | reverse -%}
 <article class="{{ post | setClasses }}">
 {%- if post.data.date %}
   <time class="postdate" datetime="{{ post.date | getISOString }}">
