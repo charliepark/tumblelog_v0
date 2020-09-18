@@ -74,6 +74,18 @@ main {
 .image { text-align: center }
 .image p { margin: 0 }
 
+.poem .postbody{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.poem h1 { margin-bottom: 0 }
+.poem h1 + p {
+  font-size: .75rem;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
 .text {}
 
 .quote .postbody { font-size: 2rem; }
