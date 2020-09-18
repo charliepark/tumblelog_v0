@@ -5,7 +5,7 @@ permalink: "three_days_in/"
 
 # Three Days In
 
-I’m three days into using this tumblelogging tool, and am pretty happy with it. Obviously, the test is how I’ll use it over time, but things are going well so far.
+I’m three days into using [this tumblelogging tool](https://github.com/charliepark/tumblelog/), and am pretty happy with it. Obviously, the test is how I’ll use it over time, but things are going well so far.
 
 ## A few things I love
 
