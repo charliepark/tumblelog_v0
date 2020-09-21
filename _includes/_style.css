@@ -76,6 +76,7 @@ main {
 /* Post-specific CSS */
 
 .image { text-align: center }
+.image img { max-width: 100% }
 .image p { margin: 0 }
 
 .poem .postbody{
