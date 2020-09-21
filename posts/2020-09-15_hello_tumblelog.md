@@ -1,8 +1,3 @@
----
-date: "2020-09-15"
-permalink: "hello_tumblelog/"
----
-
 # Hello, tumblelog
 
 This is just a quick afternoon project I threw together, to play a bit more with Eleventy ([11ty](https://www.11ty.dev/)) and [Netlify](http://netlify.com/).
