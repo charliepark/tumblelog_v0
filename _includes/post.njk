@@ -3,9 +3,9 @@ layout: index.njk
 ---
 
 <article class="{{ type }}">
-{%- if date %}
-<time class="postdate" datetime="{{ date | getISOString }}">
-  <a href="{{ url }}">{{ date | getHumanDate }}</a>
+{%- if page.date %}
+<time class="postdate" datetime="{{ page.date | getISOString }}">
+  <a href="{{ url }}">{{ page.date | getHumanDate }}</a>
 </time>
 {%- endif %}
 <div class="postbody">

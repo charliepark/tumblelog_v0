@@ -66,6 +66,10 @@ main {
   width: 100%;
 }
 
+.callout_box { background: #ececec; border-radius: .25rem; padding: .5rem 1rem; }
+.callout_box p:first-child { margin-top: 0 }
+.callout_box p:last-child { margin-bottom: 0 }
+
 .postbody { padding: 20px }
 .postbody a { color: coral; text-decoration: none; border-bottom: 1px solid #e6e6e6; }
 .postbody a:hover { border-color: #c6c6c6 }
@@ -84,6 +88,7 @@ main {
 /* Post-specific CSS */
 
 .image { text-align: center }
+.image img { max-width: 100% }
 .image p { margin: 0 }
 
 .poem .postbody{
@@ -124,8 +129,23 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
   <main>
     
 <article class="text">
+<time class="postdate" datetime="2020-09-21T07:00:00.000Z">
+  <a href="">September 21, 2020</a>
+</time>
 <div class="postbody">
-  
+  <h1>Smarter Permalinks in Eleventy</h1>
+<p>I’m continuing to enjoy Eleventy. The other day I noted that I was having trouble getting the dates to work correctly, and was hoping for some smarter autoslugging.</p>
+<p>I figured out both, and wanted to share what I did.</p>
+<p>I <em>had</em> been naming the date and permalink in the file’s header …</p>
+<pre class="language-js"><code class="language-js"><span class="token operator">--</span><span class="token operator">-</span><br>date<span class="token operator">:</span> <span class="token string">"2020-09-21"</span><br>permalink<span class="token operator">:</span> <span class="token string">"smarter_permalinks_in_eleventy/"</span><br><span class="token operator">--</span><span class="token operator">-</span></code></pre>
+<p>… but that’s duplicating the data in the filename (which was <code>2020-09-21_smarter_permalinks_in_eleventy.md</code>. This would be easier if eleventy <em>just knew</em> what the date and slug should be, right?</p>
+<p>The date part was pretty easy. I removed the <code>date</code> line from the frontmatter data, and, as long as the filename had that YYYY-MM-DD formatting, it worked properly. (Thank you, eleventy, for being smart about that!) I’m still a little unsure that the UTC / PST timezones will play nicely, but it hasn’t shown to be a problem yet. (For some reason the “eleventy will automatically handle filenames with YYYY-MM-DD in them” wasn’t working for me a few days ago. Now it’s fine. ¯\_(ツ)_/¯ )</p>
+<p>For the permalink, I created a new line in my <code>eleventy.js</code> file …</p>
+<pre class="language-js"><code class="language-js">eleventyConfig<span class="token punctuation">.</span><span class="token function">addFilter</span><span class="token punctuation">(</span><span class="token string">"getPermalink"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">page</span><span class="token punctuation">)</span> <span class="token operator">=></span> page<span class="token punctuation">.</span>fileSlug<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>… and then added a line to my <code>posts/posts.json</code> file:</p>
+<pre class="language-js"><code class="language-js"><span class="token string">"permalink"</span><span class="token operator">:</span> <span class="token string">"{{ page | getPermalink }}/index.html"</span><span class="token punctuation">,</span><br></code></pre>
+<p>Now the data and autoslug are generated off of the file name, and my post frontmatter only needs to exist if I’m specifying the post “type” (image, quote, poem, etc.). No more duplicated data.</p>
+
 </div>
 </article>
 

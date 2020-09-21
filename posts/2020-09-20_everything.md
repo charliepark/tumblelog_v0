@@ -1,6 +1,4 @@
 ---
-date: "2020-09-20T01:00:00Z"
-permalink: "everything/"
 type: quote
 ---
 

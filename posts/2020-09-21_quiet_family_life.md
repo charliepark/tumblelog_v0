@@ -1,6 +1,4 @@
 ---
-date: "2020-09-21"
-permalink: "quiet_family_life/"
 type: image
 ---
 

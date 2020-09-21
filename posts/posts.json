@@ -1,5 +1,6 @@
 {
   "layout": "post.njk",
+  "permalink": "{{ page | getPermalink }}/index.html",
   "type": "text",
   "tags": "post"
 }

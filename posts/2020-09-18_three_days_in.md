@@ -1,8 +1,3 @@
----
-date: "2020-09-18"
-permalink: "three_days_in/"
----
-
 # Three Days In
 
 I’m three days into using [this tumblelogging tool](https://github.com/charliepark/tumblelog/), and am pretty happy with it. Obviously, the test is how I’ll use it over time, but things are going well so far.
@@ -26,6 +21,10 @@ I’m three days into using [this tumblelogging tool](https://github.com/charlie
 ## Some things to work on
 
 ### Less metawork
+
+<aside class="callout_box">
+  <p><b>Update:</b> I’ve fixed this now! See here for more: <a href="/smarter_permalinks_in_eleventy">Smarter Permalinks in Eleventy</a></p>
+</aside>
 
 >Right now I have a bit of duplication of effort, in that I name the file something like `2020_09_18_three_days_in.md` and then add metadata like 
 

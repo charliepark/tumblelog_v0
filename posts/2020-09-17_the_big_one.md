@@ -1,8 +1,3 @@
----
-date: "2020-09-17T01:00:00Z"
-permalink: "the_big_one/"
----
-
 # There are fires during wartime, too.
 
 There’s a scene in the film *Hope and Glory* that I think about a lot. Thirty seconds of DDGing haven’t brought up either a clip or a quote, so you’ll have to take my word for what goes on in the scene.

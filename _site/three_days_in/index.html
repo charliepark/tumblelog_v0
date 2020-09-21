@@ -66,6 +66,10 @@ main {
   width: 100%;
 }
 
+.callout_box { background: #ececec; border-radius: .25rem; padding: .5rem 1rem; }
+.callout_box p:first-child { margin-top: 0 }
+.callout_box p:last-child { margin-bottom: 0 }
+
 .postbody { padding: 20px }
 .postbody a { color: coral; text-decoration: none; border-bottom: 1px solid #e6e6e6; }
 .postbody a:hover { border-color: #c6c6c6 }
@@ -125,7 +129,7 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
   <main>
     
 <article class="text">
-<time class="postdate" datetime="2020-09-18T00:00:00.000Z">
+<time class="postdate" datetime="2020-09-18T07:00:00.000Z">
   <a href="">September 18, 2020</a>
 </time>
 <div class="postbody">
@@ -149,6 +153,9 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
 </blockquote>
 <h2>Some things to work on</h2>
 <h3>Less metawork</h3>
+<aside class="callout_box">
+  <p><b>Update:</b> I’ve fixed this now! See here for more: <a href="/smarter_permalinks_in_eleventy">Smarter Permalinks in Eleventy</a></p>
+</aside>
 <blockquote>
 <p>Right now I have a bit of duplication of effort, in that I name the file something like <code>2020_09_18_three_days_in.md</code> and then add metadata like</p>
 </blockquote>

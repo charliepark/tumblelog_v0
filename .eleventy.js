@@ -29,6 +29,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("getHumanDate", (date) => getHumanDate(date));
   eleventyConfig.addFilter("setClasses", (post) => setClasses(post));
   eleventyConfig.addFilter("getISOString", (date) => getISOString(date));
+  eleventyConfig.addFilter("getPermalink", (page) => page.fileSlug.slice(11));
   eleventyConfig.addPassthroughCopy('images');
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);

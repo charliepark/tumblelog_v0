@@ -5,9 +5,9 @@ layout: "index.njk"
 
 {%- for post in collections.post | reverse -%}
 <article class="{{ post | setClasses }}">
-{%- if post.data.date %}
-  <time class="postdate" datetime="{{ post.data.date | getISOString }}">
-    <a href="{{ post.url }}">{{ post.data.date | getHumanDate }}</a>
+{%- if post.date %}
+  <time class="postdate" datetime="{{ post.date | getISOString }}">
+    <a href="{{ post.url }}">{{ post.date | getHumanDate }}</a>
   </time>
 {%- endif %}
   <div class="postbody">
