@@ -59,6 +59,11 @@ html.darkmode {
   color: hsla(0, 0%, 100%, 0.7);
 }
 
+img { max-width: 100% }
+
+/* Not supported anywhere yet, but in the spec */
+p:has(> img) { text-align: center }
+
 main {
   flex-grow: 1;
   margin: 0 auto;
@@ -88,7 +93,6 @@ main {
 /* Post-specific CSS */
 
 .image { text-align: center }
-.image img { max-width: 100% }
 .image p { margin: 0 }
 
 .poem .postbody{
@@ -128,6 +132,34 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
   </header>
   <main>
     <article class="text">
+  <time class="postdate" datetime="2020-09-22T07:00:00.000Z">
+    <a href="/the_has_selector/">September 22, 2020</a>
+  </time>
+  <div class="postbody">
+    <p>No browsers support it yet, but there’s a useful pseudo-class in the CSS spec that I just stumbled on: <code>:has()</code></p>
+<p>Say you have a style that applies to links, but you don’t want it to apply to links when they contain an image (like an image that links to a gallery). You could do something like this:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">a</span> <span class="token punctuation">{</span> <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #000 <span class="token punctuation">}</span><br><span class="token selector">a:has(img)</span> <span class="token punctuation">{</span> <span class="token property">border</span><span class="token punctuation">:</span> none <span class="token punctuation">}</span></code></pre>
+
+  </div>
+</article><article class="text">
+  <time class="postdate" datetime="2020-09-22T07:00:00.000Z">
+    <a href="/adhd_wearables/">September 22, 2020</a>
+  </time>
+  <div class="postbody">
+    <p>So this is pretty cool.</p>
+<p><img src="/images/unicorn.jpg" alt="A wearable device to help identify decision moments."></p>
+<p>Annouk Wipprecht is a fashion designer / engineer who creates wearable devices like the one above. That one in particular is interesting to me, as it focuses on helping identify moments when kids with ADHD “engage”. From <a href="https://spectrum.ieee.org/geek-life/hands-on/i-built-a-brain-computer-interface-for-tackling-adhd-in-children">a writeup on “Agent Unicorn”</a>:</p>
+<blockquote>
+<p>I decided to focus on what is known as the P300 event-related brain potential signal. P300 is a frequent focus of clinical exams and BCI research. It is a voltage pulse, often thought to be connected to attention and decision making, that occurs a few hundred milliseconds after an external stimulus. The P300 signal is often measured when diagnosing children with ADHD because the signal takes longer to manifest and isn’t as strong as it is in children without ADHD.</p>
+<p>ADHD is commonly treated with stimulants such as Adderall that can boost concentration and focus while reducing hyperactive and impulsive behaviors. But while medication might help soothe symptoms, it doesn’t help in understanding why a child with ADHD is more prone to react to certain stimuli, or how their symptoms might be treated in a way that reduces reliance on drugs.</p>
+<p>My goal was to create a device that would provide the data needed for such insights by monitoring both the brains of children and their environments. The result was Agent Unicorn—a headpiece with a projecting horn. The horn contains an 8-megapixel camera that records video during states of heightened P300 activity, as detected by an EEG built into the headpiece itself. The headpiece has a shape that automatically positions the electrodes at the correct locations on the skull.</p>
+</blockquote>
+<p>Here’s what it looks like when it’s going on a child:</p>
+<p><img src="/images/unicorn_in_situ.jpg" alt="The device's inventor, Annouk Wipprecht, putting the Agent Unicorn device on a child in a classroom."></p>
+<p>Annouk Wipprecht has some more cool photos of her work in a gallery <a href="https://www.anoukwipprecht.nl/gallery/">on her site</a>.</p>
+
+  </div>
+</article><article class="text">
   <time class="postdate" datetime="2020-09-21T07:00:00.000Z">
     <a href="/the_balancing_act/">September 21, 2020</a>
   </time>
@@ -139,8 +171,8 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
 <p>But all 3 of these working modes (managing up, down, and over) are important to achieving your main accountability as a manager: Delivering high-impact work on time and growing people in the process.</p>
 <p>If you don’t spend enough time with your team, you fail to set accountabilities and priorities properly and you miss coaching opportunities.</p>
 <p>If you don’t spend enough time with your management, you fail to set priorities properly, and you are likely missing context that can help your team. You also miss chances to be coached.</p>
-<p>If you don’t spend enough time with your peers, your execution will suffer. You won’t know how your team is performing or perceived. You will lack organizational support for initiatives that matter to you.
-At most stages of my early management career, I spent plenty of time with my team and with my management, but I didn’t spend enough time with my peers. That was an Achilles heel that I was only able to see after the fact.</p>
+<p>If you don’t spend enough time with your peers, your execution will suffer. You won’t know how your team is performing or perceived. You will lack organizational support for initiatives that matter to you.</p>
+<p>At most stages of my early management career, I spent plenty of time with my team and with my management, but I didn’t spend enough time with my peers. That was an Achilles heel that I was only able to see after the fact.</p>
 </blockquote>
 <p>This is really insightful. I’ve talked with folks before about managers usually only being good at one, <em>maybe</em> two of “politics, product, process, or people”, but I think the look at managing up, down, and across is a great one.</p>
 <p>In my last role, I nailed the “working with your team” piece, and did a really good job with the “peers” bit as well. In hindsight, that “managing up” piece was one I should have paid more attention to. Something learned for next time.</p>

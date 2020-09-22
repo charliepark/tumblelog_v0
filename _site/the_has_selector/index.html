@@ -132,14 +132,14 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
   </header>
   <main>
     
-<article class="image">
-<time class="postdate" datetime="2020-09-19T07:00:00.000Z">
-  <a href="">September 19, 2020</a>
+<article class="text">
+<time class="postdate" datetime="2020-09-22T07:00:00.000Z">
+  <a href="">September 22, 2020</a>
 </time>
 <div class="postbody">
-  <img src="/images/rbg_necklace.png" alt="A picture of Ruth Bader Ginsburg's iconic collar, but in black." style="max-width: 180px">
-<p>She fought. And fought. And fought.</p>
-<p>We have to do the same.</p>
+  <p>No browsers support it yet, but there’s a useful pseudo-class in the CSS spec that I just stumbled on: <code>:has()</code></p>
+<p>Say you have a style that applies to links, but you don’t want it to apply to links when they contain an image (like an image that links to a gallery). You could do something like this:</p>
+<pre class="language-css"><code class="language-css"><span class="token selector">a</span> <span class="token punctuation">{</span> <span class="token property">border-bottom</span><span class="token punctuation">:</span> 1px solid #000 <span class="token punctuation">}</span><br><span class="token selector">a:has(img)</span> <span class="token punctuation">{</span> <span class="token property">border</span><span class="token punctuation">:</span> none <span class="token punctuation">}</span></code></pre>
 
 </div>
 </article>

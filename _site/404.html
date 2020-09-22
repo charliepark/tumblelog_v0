@@ -59,6 +59,11 @@ html.darkmode {
   color: hsla(0, 0%, 100%, 0.7);
 }
 
+img { max-width: 100% }
+
+/* Not supported anywhere yet, but in the spec */
+p:has(> img) { text-align: center }
+
 main {
   flex-grow: 1;
   margin: 0 auto;
@@ -88,7 +93,6 @@ main {
 /* Post-specific CSS */
 
 .image { text-align: center }
-.image img { max-width: 100% }
 .image p { margin: 0 }
 
 .poem .postbody{

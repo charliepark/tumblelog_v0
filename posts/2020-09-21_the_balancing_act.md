@@ -11,6 +11,7 @@ In a great thread on Twitter, Kieran Snyder shares [some great management insigh
 >If you don’t spend enough time with your management, you fail to set priorities properly, and you are likely missing context that can help your team. You also miss chances to be coached.
 >
 >If you don’t spend enough time with your peers, your execution will suffer. You won’t know how your team is performing or perceived. You will lack organizational support for initiatives that matter to you.
+>
 >At most stages of my early management career, I spent plenty of time with my team and with my management, but I didn’t spend enough time with my peers. That was an Achilles heel that I was only able to see after the fact.
 
 This is really insightful. I’ve talked with folks before about managers usually only being good at one, *maybe* two of “politics, product, process, or people”, but I think the look at managing up, down, and across is a great one.
