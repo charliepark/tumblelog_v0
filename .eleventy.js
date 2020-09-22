@@ -20,8 +20,9 @@ const setClasses = (post) => {
   const { type } = post.data;
   if (type != 'quote') { return type; }
   const length = post.templateContent.length;
+  console.log(length);
   if (length < 250) { return `${type} short`; }
-  if (length > 750) { return `${type} long`; }
+  if (length > 450) { return `${type} long`; }
   return type;
 };
 
