@@ -60,6 +60,8 @@ main {
   width: 100%;
 }
 
+strong { font-weight: 600 }
+
 /* Not supported anywhere yet, but in the spec */
 p:has(> img) { text-align: center }
 
@@ -68,7 +70,7 @@ p:has(> img) { text-align: center }
 .callout_box p:last-child { margin-bottom: 0 }
 
 .postbody { padding: 20px }
-.postbody a { color: coral; text-decoration: none; border-bottom: 1px solid #e6e6e6; }
+.postbody a { border-bottom: 1px solid #e6e6e6; color: hsl(197, 100%, 30%); font-weight: 600; text-decoration: none }
 .postbody a:hover { border-color: #c6c6c6 }
 
 .postdate {
