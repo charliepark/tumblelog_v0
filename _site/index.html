@@ -16,12 +16,16 @@ blockquote {
 }
 
 body {
+  background-image: url('/images/arrow.webp');
+  background-size: 200px 125px;
+  background-position: 48.85% -2px;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   font-family: 'Avenir Next', Avenir, system-ui, -apple-system, sans-serif;
   justify-content: space-between;
   line-height: 1.5;
-  margin: 4rem 0 0;
+  margin: 6rem 0 0;
   min-height: 100vh;
 }
 
@@ -68,6 +72,8 @@ main {
   width: 100%;
 }
 
+nav { padding: 1rem }
+
 strong { font-weight: 600 }
 
 /* Not supported anywhere yet, but in the spec */
@@ -78,7 +84,8 @@ p:has(> img) { text-align: center }
 .callout_box p:last-child { margin-bottom: 0 }
 
 .postbody { padding: 20px }
-.postbody a { border-bottom: 1px solid #e6e6e6; color: hsl(197, 100%, 30%); font-weight: 600; text-decoration: none }
+nav a, .postbody a { border-bottom: 1px solid #e6e6e6; color: hsl(197, 100%, 30%); font-weight: 600; text-decoration: none }
+nav a { margin: .5rem }
 .postbody a:hover { border-color: #c6c6c6 }
 
 .postdate {
@@ -131,6 +138,7 @@ code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-s
   <header>
     <h1><a href="/">Charlie Park!</a></h1>
     <div>(or, rather, his tumblelog)</div>
+    <nav><a href="/">home</a><a href="/about">about me</a><a href="/projects">projects</a></nav>
   </header>
   <main>
     <article class="text">
