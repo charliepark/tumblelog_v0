@@ -1,0 +1,119 @@
+# Projects
+
+Gosh, I love building stuff. Shipping makes everything better.
+
+Apart from my normal jobs, I’ve built a few things as side projects. Some of them are pretty old/
+
+## Still-Alive Projects
+
+### The As-Yet Unnamed Tumblelog Project
+
+I think Eleventy is great, and have enjoyed building a few things in it. This blog, for example!
+
+I wanted to start blogging more, and wanted it to be fun again. So I wrote a tumblelog in Eleventy. I had a few name candidates — 11tyumblelog, tumb11elog, etc. — but they all felt as forced as ska band names in the late 90s. So! No name for now.
+
+The GitHub repo ([github.com/charliepark/tumblelog](https://github.com/charliepark/tumblelog)) is still a bit tied to this particular blog, but it is 100% possible to grab it and build your own Eleventy-based tumblelog yourself, and to then host it on GitHub Pages or Netlify for free. Would recommend!
+
+<h3 style="padding-top: 2rem">Find You A Gif</h3>
+
+[![A screenshot of the website at findyouagif.com](/images/findyouagif.png)](https://findyouagif.com)
+
+Ever have trouble finding the right GIF for posting in Slack? That joke can’t wait and Giphy’s too slow to load? I gotchu.
+
+[Find You A Gif](https://findyouagif.com/) is a JAMstack site I made a few years back, as a speedy way of using the Giphy API. Use the search box at the bottom of the page to look for a gif, copy the URL, and make sure you’re posting it in the right channel in Slack!
+
+<h3 style="padding-top: 2rem">CorrectEmailTypos.js</h3>
+
+*Situation:* Your user, joe@gmail.com, is saving his account on your site.<br>
+*Complication:* He accidentally mistypes it, as joe@gmal.cmo.<br>
+*Question:* What are you going to do about it?<br>
+*Answer:* Not worry about it, because you’re using this handy javascript library: [github.com/charliepark/correct_email_typos/](https://github.com/charliepark/correct_email_typos/).
+
+It’s really just a simple JavaScript function that gives you an easy, tested way to automatically fix your users’ typoed email addresses. It’s a JS implementation of a similar library I originally wrote in Ruby a long time ago.
+
+It fixes things more often than you would either believe or hope.
+
+
+<h2 style="margin-top: 6rem">Old/Defunct Projects</h2>
+
+<h3><s>Collins</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the website at collins.charliepark.org](/images/collins.png)
+
+Also in the land of static-site-generating blogging software, I wrote Collins, a single-file, minimalist microblogging tool for you to host on your own server. If I were writing it over, I’d probably go with Eleventy rather than PHP, but it was a fun experiment.
+
+<h3 style="padding-top: 2rem"><s>Monotask</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the old Monotask interface](/images/monotask.png)
+
+I’m really interested in how we can better engage in meaningful work. Or, alternately, how we can keep from getting distracted by non-meaningful work. I spent a few years working on a startup with a friend, focused on attention management. The core idea: Monotask let you turn off the distracting parts of the internet, so you could do good work.
+
+I was super-proud of the interface I designed and built, and of the total service we built together. But in the end, we couldn’t get enough paying subscribers to justify the work that was involved in keeping it going. Ironically, Monotask became an object lesson in itself — a distraction from other work that deserved deeper attention than it was getting. So we shut Monotask down.
+
+<h3 style="padding-top: 2rem"><s>HATCHSHOW</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the old Hatch Show plugin homepage](/images/hatchshow.png)
+
+There’s a typographic style of layout, where a block of text is embiggened until it takes up the entire width of the textbox. (That width is called a *measure*, btw.) It’s commonly associated with the concert poster printing house HATCH SHOW PRINT. (All caps. I don’t make the rules.)
+
+Anyway, I made a jQuery plugin back in the day that allowed you to do exactly that, for when you wanted to lay out your site in a similar way.
+
+<h3 style="padding-top: 2rem"><s>Blipnote</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the old Blipnote homepage](/images/blipnote.png)
+
+It used to be kind of hard to send yourself a random thought or idea if you were on your phone, or if you didn't want to open up your nightmarish email inbox. Blipnote let you email yourself notes. It was a JAMstack site before JAMstack was a thing. It used the Mandrill API from Mailchimp. By the time Mailchimp started charging for Mandrill, I was using Slack to post quick notes to myself, so I closed Blipnote down.
+
+<h3 style="padding-top: 2rem"><s>Gutenbetter</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+While we’re talking about typography, I made a browser extension to make Project Gutenberg public domain book layouts better. It was called … Gutenbetter. Technically, [it](https://github.com/charliepark/gutenbetter) still works, but it was really just some CSS and a line of JS. Just wanted to mention it!
+
+<h3 style="padding-top: 2rem"><s>The Measure</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the homepage for The Measure](/images/themeasure.png)
+
+One more typesetting one and we’ll move on. The Measure was a typesetting design contest I developed and ran for a little bit. The contestants were given a title from the public domain and page dimensions. They then designed and laid out the first chapter of the book.
+
+It was really cool! People sent in some really impressive stuff.
+
+My favorite subtle detail<span style="color: darkred">:</span> One month the book to design was *Dracula*, and one designer made all of the colons red.
+
+
+
+<h3 style="padding-top: 2rem"><s>The Attention Management Blog</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the Attention Management Blog homepage](/images/attnmgmtblog.png)
+
+In line with my interest about attention management (see Monotask, above), [The Attention Management Blog](https://attnmgmtblog.com/) was a tumblelog I maintained for a few years. It has quotes, links, excerpts, and other foraged bits from the web that address focus, distraction, and doing good work.
+
+<h3 style="padding-top: 2rem"><s>Beautiful Buttons For Twitter Bootstrappers</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the Beautiful Buttons page](/images/beautiful_buttons_screenshot.png)
+
+Back when Bootstrap was a new thing, I made a tool for generating CSS to make buttons nicer. Good ol’ skeumorphism amirite? I liked that there was a “puffiness” axis you could adjust.
+
+<h3 style="padding-top: 2rem"><s>Parentheticals</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of Parentheticals, applied to an article](/images/parentheticals_example.png)
+
+A jQuery plugin for extended, multi-layered footnotes, à la David Foster Wallace.
+
+Back in 2005, DFW wrote a piece for The Atlantic, “Host”. To include his footnotes in a present-but-non-intrusive way, the typesetters at the magazine used color-coded callouts that visually linked the anchor text with the corresponding footnote. Parentheticals was a jQuery plugin that mimics the layout approach from DFW’s piece.
+
+I’d honestly love to re-do Parentheticals using CSS Grid. I think you could do some pretty neat stuff with it.
+
+<h3 style="padding-top: 2rem"><s>Wallet Garden</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the now-defunct Wallet Garden website](/images/walletgarden.png)
+
+Wallet Garden was a *very* simple idea — give people a place to log the “cancel/replace your card” numbers for the things in their wallets. I think I built it in Sinatra?
+
+<h3 style="padding-top: 2rem"><s>Remojōbo</s> <span class="smallcaps gray">(defunct)</span></h3>
+
+![A screenshot of the now-defunct Remojobo (pronounced ree moe joe bo)](/images/remojobo.png)
+
+Talk about being ahead of its time! Back in 2013, I built Remojōbo, one of the earliest job boards (maybe the first?) for remote-only (or remote-friendly) companies. I ran it for a couple of months, and then sold it to someone with a vision and time. Sadly, it’s not around anymore.
+
+<style>
+  img { display: block; margin: auto; }
+</style>
