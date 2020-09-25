@@ -110,7 +110,7 @@ Wallet Garden was a *very* simple idea — give people a place to log the “ca
 
 <h3 style="padding-top: 2rem"><s>Remojōbo</s> <span class="smallcaps gray">(defunct)</span></h3>
 
-![A screenshot of the now-defunct Remojobo (pronounced ree moe joe bo)](/images/remojobo.png)
+![A screenshot of the now-defunct Remojobo (pronounced ree moe joe bo)](/images/remojobo.jpg)
 
 Talk about being ahead of its time! Back in 2013, I built Remojōbo, one of the earliest job boards (maybe the first?) for remote-only (or remote-friendly) companies. I ran it for a couple of months, and then sold it to someone with a vision and time. Sadly, it’s not around anymore.
 

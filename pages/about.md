@@ -8,9 +8,9 @@ Hi there. I’m Charlie. I live in San Francisco and write code, but that’s th
 
 Work-wise, I’m a frontend engineer (but I’ve also spent time in people management, and my team loved me — the team I led had a CultureAmp engagement score of 95%, which is one of the highest in the industry). I’ve worked at Slack and IFTTT, and currently run my own indie personal finance webapp.
 
-I enjoy developing performant, accessible sites, and am comfortable with JavaScript (both React and vanilla JS, including ES6+ features/syntax), Typescript, semantic HTML, and CSS. I’ve spoken at industry conferences, on topics as varied as the performance benefits of flexbox and why tech dudes need to stop using the word “females” when talking about women.
+I enjoy developing performant, accessible sites, and am comfortable with JavaScript (both React and vanilla JS, including ES6+ features/syntax), Typescript, semantic HTML, and modern CSS, (like flexbox, CSS grid, etc.).
 
-<p><strong style="background: LemonChiffon">I’m currently looking to join a team of thoughtful, enthusiastic, friendly people. I’d love to chat with you, if that sounds like your team!</strong> My email’s charlie@charliepark.org.
+<p><strong style="background: hsla(60, 100%, 50%, 0.5)">I’m currently looking to join a team of thoughtful, enthusiastic, friendly people, as a frontend engineer. I’d love to chat with you, if that sounds like your team!</strong> My email’s charlie@charliepark.org.
 
 ## This Tumblelog
 
