@@ -19,8 +19,7 @@ const getHumanDate = (date) => {
 const setClasses = (post) => {
   const { type } = post.data;
   if (type != 'quote') { return type; }
-  const length = post.templateContent.length;
-  console.log(length);
+  const { length } = post.templateContent;
   if (length > 850) { return `${type} verylong`; }
   if (length > 450) { return `${type} long`; }
   if (length < 250) { return `${type} short`; }

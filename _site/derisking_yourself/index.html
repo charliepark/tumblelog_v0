@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Charlie Park’s tumblelog</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    /* General CSS for the blog */
+a { color: inherit; text-decoration: none; }
+
+blockquote {
+  border-left: 2px solid #e6e6e6;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+body {
+  background-image: url('/images/arrow.webp');
+  background-size: 200px 125px;
+  background-position: 48.85% -2px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Avenir Next', Avenir, system-ui, -apple-system, sans-serif;
+  justify-content: space-between;
+  line-height: 1.5;
+  margin: 6rem 0 0;
+  min-height: 100vh;
+}
+
+code {
+  font-family: 'Monaco', monospace;
+  font-size: .8em;
+  background: #e6e6e6;
+  border-radius: 4px;
+  padding: 4px 6px;
+}
+pre code { border: none; padding: 0 }
+
+footer {
+  background: #464646;
+  color: hsla(0, 0%, 100%, 0.8);
+  margin-top: 5rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 { font-size: 2rem; line-height: 1.3; margin-top: 0.25em; }
+header h1 { font-size: 4rem; margin-bottom: 0 }
+.postbody h1,
+.postbody h2,
+.postbody h3 { padding-left: 1.2em; text-indent: -1.2em }
+
+h2 { font-size: 1.5rem; margin: 1.5rem 0 0 }
+
+h3 { font-size: 1.2rem; margin: 1.5rem 0 0 }
+
+h4 { font-size: 1rem }
+
+header { text-align: center }
+
+html {
+  color: hsla(0, 0%, 0%, 0.9)
+}
+html.darkmode {
+  background: #272727;
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+img { max-width: 100% }
+
+main {
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+nav { padding: 1rem }
+
+strong { font-weight: 600 }
+
+/* Not supported anywhere yet, but in the spec */
+p:has(> img) { text-align: center }
+
+.callout_box { background: #ececec; border-radius: .25rem; padding: .5rem 1rem; }
+.callout_box p:first-child { margin-top: 0 }
+.callout_box p:last-child { margin-bottom: 0 }
+
+.gray { color: #545454 }
+
+.postbody { padding: 20px }
+nav a, .postbody a { border-bottom: 1px solid #e6e6e6; color: hsl(197, 100%, 30%); font-weight: 600; text-decoration: none }
+nav a { margin: .5rem }
+.postbody a:hover { border-color: #c6c6c6 }
+
+.smallcaps, .postdate, .poem h1 + p {
+  font-size: .75em;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.postdate {
+  border-bottom: 1px solid #e6e6e6;
+  display: block;
+  margin-top: 4rem;
+  text-align: right;
+}
+.postdate a { color: #545454; display: block; padding: 0 1rem }
+
+/* Post-specific CSS */
+
+.image { text-align: center }
+.image img { margin-bottom: 1rem }
+.image p { margin: 0 }
+
+.poem .postbody{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.poem h1 { margin-bottom: 0 }
+
+.text {}
+
+.quote .postbody { font-size: 2rem; }
+.quote.long .postbody { font-size: 1.5rem; }
+.quote.short .postbody { font-size: 3rem; line-height: 1.3 }
+.quote.verylong .postbody { font-size: 1rem; }
+.quote p { padding-left: 2rem }
+.quote p:first-child { padding-left: 2rem; position: relative;}
+.quote p:first-child::before { content: '“'; font-family: Georgia; font-size: 4rem; line-height: 3rem; position: absolute; top: 10px; left: 0; }
+.quote p:last-child { font-size: 1rem; text-align: right }
+
+.video iframe { width: 100% !important }
+
+
+
+/* Minified code styling; https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css  */
+code[class*=language-],pre[class*=language-]{color:#f8f8f2;background:0 0;text-shadow:0 1px rgba(0,0,0,.3);font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto;border-radius:.3em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#272822}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#f8f8f2}.token.namespace{opacity:.7}.token.constant,.token.deleted,.token.property,.token.symbol,.token.tag{color:#f92672}.token.boolean,.token.number{color:#ae81ff}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#a6e22e}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url,.token.variable{color:#f8f8f2}.token.atrule,.token.attr-value,.token.class-name,.token.function{color:#e6db74}.token.keyword{color:#66d9ef}.token.important,.token.regex{color:#fd971f}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+  </style>
+</head>
+<body>
+  <header>
+    <h1><a href="/">Charlie Park!</a></h1>
+    <div>(or, rather, his tumblelog)</div>
+    <nav><a href="/">home</a><a href="/about">about me</a><a href="/projects">projects</a></nav>
+  </header>
+  <main>
+    
+<article class="text">
+<time class="postdate" datetime="2020-09-28T07:00:00.000Z">
+  <a href="">September 28, 2020</a>
+</time>
+<div class="postbody">
+  <h1>De-risking Yourself: An Interviewing Tip for Engineers</h1>
+<p>”So tell me about a hard technical challenge you solved recently.”</p>
+<p>For a variety of reasons, this has always been one of my least favorite questions from recruiters.</p>
+<p>For one thing, I don’t like talking about myself.</p>
+<p>For another, where many engineers get excited about the technical challenges they resolve, I care far more about the <em>people</em> the new feature helps, and <em>how their lives are improved</em> because of my work. I get that recruiters want to give engineers a platform to geek out and show their enthusiasm, but hearing from a user “our marriage is so much healthier because of how your app lets us communicate about money” is far more satisfying to me than me thinking about how I enabled payments in my app by integrating a new third-party API or how I rearchitected the backend JSON API to more efficiently send data to the frontend for users with a lot of data.</p>
+<p>And — perhaps most relevant — as someone with an almost crippling level of impostor syndrome, I feel like if I’ve solved a problem, it can’t have been <em>that</em> technically challenging, and talking about it would be embarrassing.</p>
+<p>My brain used to hear that question from the recruiter as “tell me why you think you’re so great, and why I should give you this job.” And my brain, quietly, to itself, would mumble “I don’t and you probably shouldn’t.”</p>
+<p>When interviewing, though, that attitude is self-defeating. And it took me a bit of processing to understand that it’s missing the point entirely.</p>
+<h2>The Two Buckets</h2>
+<p><strong>Ultimately, just about every decision — in engineering, in hiring, in sports, in relationships, in party planning, in college selection — falls into one of two buckets: One is the “seizing opportunity” bucket; the other is the “mitigating risk” bucket.</strong></p>
+<p>When you’re talking with a recruiter and you aren’t a “name” in the development community (you aren’t someone they’ve heard of on Twitter, you haven’t spoken at lots of conferences, you aren’t working at a marquee company, etc.) (this is almost all of us!), the recruiter has you, very squarely, in the “mitigating risk” bucket. Until proven otherwise, you’re risky. They don’t <em>want</em> you in that bucket … they just have to play it safe.</p>
+<p>Hiring is expensive. It takes time. It can take months to find the right person for a role. They would rather accidentally pass on an ideal candidate than accidentally hire a merely okay candidate.</p>
+<p>So what they’re trying to do is to de-risk the situation. Your job, as a candidate, is to make it easy for them to do that. Eventually, working together, you and the recruiter will move you from the “mitigating risk” bucket to the “seizing opportunity” bucket.</p>
+<p>So instead of hearing “okay, impress me”, your brain should hear “tell me a story! Help me get a sense of the types of problems you like solving. Show me a little about how you think. And — most important — give me something to pull you out of the ‘risky’ bucket that I can relay back to the hiring manager.”</p>
+<h2>How You Can De-Risk Yourself</h2>
+<p>So what <em>should</em> you say?</p>
+<h3>1. Focus On A “Bottom Line” Area</h3>
+<p>Growing a userbase. Increasing revenues. Developing a feature that makes the premium tier even more appealing to enterprise customers. Drastically optimizing performance or resiliency. All of these deal with topics that every business is trying to tackle. And if you’ve successfully done something in that direction in the past, you can probably help them do it, too.</p>
+<p>You could talk about developing a design system or adding an accessibility rule to your team’s linter, but those aren’t going to have the same impact to a recruiter or hiring manager if you use them as your key example (unless you can directly tie them in to the job you’re interviewing for). <strong>At this stage of the conversation, emphasize the <em>business value</em> that you added.</strong></p>
+<h3>2. Pay Attention To (And Reference) The Technologies In The Job Description</h3>
+<p>Before you get on the call with the recruiter, review the job description, write down all the technologies it asks for, and circle the ones that you used in solving the “recent technical challenge”. When telling your story, make sure to mention them by name! Remember, your technical recruiter probably isn’t an engineer themselves, so unless you’re explicitly referencing the technologies they’re listening for, your previous work might not be appreciated or noted.</p>
+<p>If their job req info sheet prompts them to listen for “React components” and you say “… I developed a Design System …” without saying “React components”, your story might not land. If there’s a technology in the job description that you didn’t use in the project but that you know well, find a way to mention it offhand: “I thought about a few different frameworks, and even though I’ve used React before for apps, I felt like the job requirements were better met by a different framework, called Svelte.”</p>
+<h3>3. Circle Back To The Impact Your Work Had</h3>
+<p>“… and so my code cut our monthly AWS bill by 4%.” “… by pulling the landing page out of React and making it a cached, static page on a CDN, it cut the page’s loading time by 30% and increased new customer conversions by 6%.” “… and since they were happy with the feature I built, our biggest customer stayed on, and even increased their monthly spend.”</p>
+<p>Your work did something, right? It resolved some problem. More money came in. The business grew.</p>
+<p>Make sure to highlight that outcome. Just like staging a house that’s about to go on the market helps potential buyers picture themselves living in that space, you want to help the recruiter picture you joining the team and solving their problems.</p>
+<h3>4. Be Ready For The Follow-Up: Think About What You’d Do Differently Next Time</h3>
+<p>So you’ve shared your story about solving a business need, mentioned how you went about it, and then shared how your work improved the bottom line. Great! It’s not uncommon for the recruiter to ask you about what you learned, or what you’d do differently if you did it again. Have an answer!</p>
+<p>Maybe you’d bring in more (or fewer) stakeholders earlier (or later). Or you’d do more paper prototyping before building it out. Or you’d have mentored a more junior developer and had them take on more responsibility.</p>
+<p>Whatever it was, you probably would change <em>something</em> about it. Good! You learned something. Showing that you’re reflective and humble demonstrates that you’re capable of growth, and further removes risk.</p>
+<h2>If You’re an “Unknown Quantity”,<br>You’re Inherently Risky</h2>
+<p>Remember, as you prepare, that the recruiter talks to a lot of people, and many of them aren’t the right fit. Until you prove otherwise, you’re a risky bet. Structure your conversation, as much as possible, to remove any anxiety the recruiter might have. They don’t want to either waste the hiring manager’s time if you’re a bad fit, or to burn social capital and hurt their own career growth if you’re a really bad fit.</p>
+<p>Whether you’re a good fit or not … they won’t know it until you help them see it.</p>
+
+</div>
+</article>
+
+  </main>
+  <footer>
+    <p>Hey there. I’m Charlie. I like adventures, friends, and adventures with friends.</p>
+    <p>Would love for you to say hi! charlie@charliepark.org</p>
+  </footer>
+</body>
+</html>
+
