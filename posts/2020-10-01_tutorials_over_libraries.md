@@ -1,0 +1,15 @@
+# Tutorials Over Libraries
+
+Andy Bell published a new tutorial today, on [how to build a responsive media browser with CSS](https://piccalil.li/tutorial/build-a-responsive-media-browser-with-css/). It’s a great runthrough of how he did it, and I especially like his 16:9 aspect ratio trick for the media object. It’s clever, while still being clear — a line that’s surprisingly hard for many developers to walk. And Andy does a great job talking through some of the reasoning behind different decisions, like some choices he made in the service of universal design.
+
+So the article’s great, but what I really want to write about here is how much I appreciate that he wrote it up as a *tutorial* and not as a *library*.
+
+An aspect of “the old web” that I miss is people writing up how they solved different technical challenges. I’m guilty of this, too. To be sure, people still do write things up, but it seems like it’s far more common for people to create a JavaScript module and to release it on NPM these days. “Hey, world. Here’s a ready-to-go responsive media browser! I’ve hidden the complicated parts so you don’t need to worry about them.”
+
+Matthew Crawford — motorcycle mechanic and philosophy/sociology research fellow at UVA — talks about this principle (and how damaging it can be) a fair amount in his book *Shop Class As Soul Craft*. In his case, he talks about the evolution of the dipstick in the car. When cars first came out, you couldn’t own one unless you knew how the internal parts worked together. Over time, car mechanics began to take on that work, and car owners only needed to check their engine oil level every once in a while. Then came the “check engine” light. Later, the OBD-II monitor, which required not only specialized knowledge, but specialized hardware and software. Ultimately, some cars didn’t even have a dipstick accessible to the owner, and it could only be serviced by taking it in to the dealer. (Rent-seeking isn’t only present in the SaaS world.)
+
+*Yes*, being freed from having to deal with “the complicated parts” meant that people were freed to do other (presumably more valuable) things with their time. And there’s something to be said for an external library that’s properly tested versus your own homespun version. But that external reliance comes at a cost of knowing your own tools and honing your craft. Of understanding the bespoke decisions that go into developing the particular thing you’re making, and of learning about both common pitfalls and edge cases to account for. Of knowing how to fix things when the externally-provided library doesn’t work any longer.
+
+So I think there’s a lot to be said for getting your hands dirty and — yes — duplicating work that others have done.
+
+Tutorials, like the one that Andy wrote, are one of the best things about the web, and are so much richer than a comparable package/module/component. I’d love to see more people writing up their processes, and showing off how they build things. And, ultimately, showing the rest of us how we, too, can build something similar.
