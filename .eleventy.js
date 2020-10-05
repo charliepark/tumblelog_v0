@@ -31,6 +31,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("setClasses", (post) => setClasses(post));
   eleventyConfig.addFilter("getISOString", (date) => getISOString(date));
   eleventyConfig.addFilter("getPermalink", (page) => page.fileSlug.slice(11));
+  eleventyConfig.addFilter("smartquotes", (post) => {
+    const hawaii = new RegExp(/Hawai'i/g);
+    const slang = new RegExp(/'(cause|em|til|twas)/g);
+    const apostrophes = new RegExp(/(\b)'(\b)/g);
+    const years = new RegExp(/(\s)'(\d)/g);
+    const openDoubles = new RegExp(/(\s|>|^)&quot;/g);
+    const closeDoubles = new RegExp(/&quot;(\s|\p{P}|$)?/gu);
+    const openSingles = new RegExp(/(\s|>|^)'/g);
+    const closeSingles = new RegExp(/'(\s|\p{P}|$)?/gu);
+    const stetSingles = new RegExp(/stet’stet/g);
+    return post
+      .replace(hawaii, "Hawaiʻi").replace(slang, "’$1")
+      .replace(apostrophes, "$1’$2").replace(years, "$1’$2")
+      .replace(openDoubles, "$1“").replace(closeDoubles, "”$1")
+      .replace(openSingles, "$1‘").replace(closeSingles, "’$1")
+      .replace(stetSingles, "'");
+  });
   eleventyConfig.addPassthroughCopy('images');
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);

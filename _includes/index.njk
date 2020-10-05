@@ -16,7 +16,7 @@
     <nav><a href="/">home</a><a href="/about">about me</a><a href="/projects">projects</a></nav>
   </header>
   <main>
-    {{ content | safe }}
+    {{ content | smartquotes | safe }}
   </main>
   <footer>
     <p>Hey there. I’m Charlie. I like adventures, friends, and adventures with friends.</p>

@@ -14,6 +14,7 @@ permalink: '/feed.json'
     {
       "id": "https://charliepark.org{{ item.url }}",
       "url": "https://charliepark.org{{ item.url }}",
+      "title": "{{ item.data.type }}: {{ item.url }}",
       "content_html": "{{ item.templateContent | replace('"', "'") | replace("\n", "")| replace("\\", "\\\\") | safe }}"
     }{% if not loop.last %},{% endif %}
   {% endfor %}
