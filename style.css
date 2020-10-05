@@ -21,10 +21,6 @@ body {
   min-height: 100vh;
 }
 
-body.serif {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
 button {
   background: hsl(197, 100%, 30%);
   border: none;
@@ -96,6 +92,8 @@ p:has(> img) { text-align: center }
 
 .gray { color: #545454 }
 
+.highlight { background: hsla(60, 100%, 50%, 0.5) }
+
 .postbody { padding: 20px }
 nav a, .postbody a { border-bottom: 1px solid #e6e6e6; color: hsl(197, 100%, 30%); font-weight: 600; text-decoration: none }
 nav a { margin: .5rem }
@@ -127,6 +125,8 @@ nav a { margin: .5rem }
   flex-direction: column;
 }
 .poem h1 { margin-bottom: 0 }
+
+.serif .postbody { font-family: 'Hoefler Text', serif; line-height: 1.6 }
 
 .text {}
 

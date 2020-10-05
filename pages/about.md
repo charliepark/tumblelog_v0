@@ -10,7 +10,7 @@ Work-wise, I’m a frontend engineer (but I’ve also spent time in people manag
 
 I enjoy developing performant, accessible sites, and am comfortable with JavaScript (both React and vanilla JS, including ES6+ features/syntax), Typescript, semantic HTML, and modern CSS, (like flexbox, CSS grid, etc.).
 
-<p><strong style="background: hsla(60, 100%, 50%, 0.5)">I’m currently looking to join a team of thoughtful, enthusiastic, friendly people, as a frontend engineer. I’d love to chat with you, if that sounds like your team!</strong> My email’s charlie@charliepark.org.
+<p><strong class="highlight">I’m currently looking to join a team of thoughtful, enthusiastic, friendly people, as a frontend engineer. I’d love to chat with you, if that sounds like your team!</strong> My email’s charlie@charliepark.org.
 
 ## This Tumblelog
 

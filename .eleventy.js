@@ -34,21 +34,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("smartquotes", (post) => {
     const hawaii = new RegExp(/Hawai'i/g);
     const slang = new RegExp(/'(cause|em|til|twas)/g);
-    const apostrophes = new RegExp(/(\b)'(\b)/g);
-    const years = new RegExp(/(\s)'(\d)/g);
-    const openDoubles = new RegExp(/(\s|>|^)&quot;/g);
-    const closeDoubles = new RegExp(/&quot;(\s|\p{P}|$)?/gu);
-    const openSingles = new RegExp(/(\s|>|^)'/g);
-    const closeSingles = new RegExp(/'(\s|\p{P}|$)?/gu);
-    const stetSingles = new RegExp(/stet’stet/g);
+    const apostrophes = new RegExp(/(?<=<(h|l|p[^r]).*)\b'\b/g);
+    const years = new RegExp(/(?<=\s)'(?=\d)/g);
+    const openDoubles = new RegExp(/(?<=<(h|l|p[^r]).*)(?<=\s|>)&quot;/g);
+    const closeDoubles = new RegExp(/(?<=<(h|l|p[^r]).*“.*)&quot;(?=(\s|\p{P}|<))/gu);
+    const openSingles = new RegExp(/(?<=<(h|l|p[^r]).*)(?<=\s|>)'/g);
+    const closeSingles = new RegExp(/(?<=<(h|l|p[^r]).*‘.*)'(?=(\s|\p{P}|<))/gu);
     return post
       .replace(hawaii, "Hawaiʻi").replace(slang, "’$1")
-      .replace(apostrophes, "$1’$2").replace(years, "$1’$2")
-      .replace(openDoubles, "$1“").replace(closeDoubles, "”$1")
-      .replace(openSingles, "$1‘").replace(closeSingles, "’$1")
-      .replace(stetSingles, "'");
+      .replace(apostrophes, "’").replace(years, "’")
+      .replace(openDoubles, "“").replace(closeDoubles, "”")
+      .replace(openSingles, "‘").replace(closeSingles, "’");
   });
   eleventyConfig.addPassthroughCopy('images');
+  eleventyConfig.addPassthroughCopy('style.css');
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setDataDeepMerge(true);
   eleventyConfig.setTemplateFormats(["svg", "liquid", "md", "njk"]);
