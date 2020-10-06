@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("getISOString", (date) => getISOString(date));
   eleventyConfig.addFilter("getPermalink", (page) => page.fileSlug.slice(11));
   eleventyConfig.addFilter("smartquotes", (post) => {
-    const hawaii = new RegExp(/Hawai'i/g);
+    const hawaii = new RegExp(/(?<=<(h|l|p[^r]).*)Hawai'i/g);
     const slang = new RegExp(/'(cause|em|til|twas)/g);
     const apostrophes = new RegExp(/(?<=<(h|l|p[^r]).*)\b'\b/g);
     const years = new RegExp(/(?<=\s)'(?=\d)/g);

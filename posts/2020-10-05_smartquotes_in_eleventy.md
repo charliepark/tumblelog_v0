@@ -249,7 +249,7 @@ We also have an interesting case where — in the Hawaiian language — the offi
 The 'okina is technically present in many Hawaiian words, like Oʻahu or Kauaʻi, but it usually gets dropped when the words are being written in English. In fact, the actual name of the US state is "Hawaii" — no 'okina. This filter catches Hawai'i, but doesn't attempt to catch all Hawaiian words with 'okinas. (My assumption is that if you're paying attention to 'okinas, you're going to be hardcoding them in anyway.)
 
 ```js
-const hawaii = new RegExp(/Hawai'i/g);
+const hawaii = new RegExp(/(?<=<(h|l|p[^r]).*)Hawai'i/g);
 ```
 
 And with that, for now, we've got our filter.
@@ -260,7 +260,7 @@ Here's what goes in your .eleventy.js file:
 
 ```js
 eleventyConfig.addFilter("smartquotes", (post) => {
-  const hawaii = new RegExp(/Hawai'i/g);
+  const hawaii = new RegExp(/(?<=<(h|l|p[^r]).*)Hawai'i/g);
   const slang = new RegExp(/'(cause|em|til|twas)/g);
   const apostrophes = new RegExp(/(?<=<(h|l|p[^r]).*)\b'\b/g);
   const years = new RegExp(/(?<=\s)'(?=\d)/g);
