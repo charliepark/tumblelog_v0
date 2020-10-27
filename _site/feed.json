@@ -9,6 +9,13 @@
   "items": [
   
     {
+      "id": "https://charliepark.org/seismic/",
+      "url": "https://charliepark.org/seismic/",
+      "title": "image: /seismic/",
+      "content_html": "<p><img src='/images/seismic.gif' alt='A gif showing a professor moving blocks to represent buildings of different heights, showing that buildings of different heights respond in different ways to earthquake waves of varying frequencies. A tall building will respond to low-frequency oscillations. A medium building will respond to medium-frequency oscillations. A short building will respond to high-frequency oscillations.'></p><p>A demonstration of the various responses from buildings of different heights to earthquake waves of varying frequencies.</p>"
+    },
+  
+    {
       "id": "https://charliepark.org/oryoki/",
       "url": "https://charliepark.org/oryoki/",
       "title": "image: /oryoki/",
