@@ -2,7 +2,7 @@
 type: image
 ---
 
-<video controls width="560">
+<video controls>
   <source src="/images/crater_lake_timelapse.mp4" type="video/mp4">
 </video>
 
