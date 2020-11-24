@@ -25,6 +25,8 @@ The regex is doing this:
 \}   → "… with a closing bracket following it."
 ```
 
+Obviously, _some_ of the instances that match that pattern will be legit. But if you're seeing a lot of the same ones over and over, they might be good candidates for moving either into a ContextProvider or closer to wherever you're using them.
+
 So. Go refactor. Have fun.
 
 (Side note: 485 results in 58 files. Merp. Good news, though: it's getting better.)
